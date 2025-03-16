@@ -9,27 +9,26 @@
 <body>
     <p>
     <?php
-        // 関数の定義
-        function sort_2way($order) {
-            $nums = [15, 4, 18, 23, 10];
-
+        function sort_2way($array, $order) {
             if ($order) {
                 echo '昇順にソートします。<br>';
-                sort($nums); // シンプルに昇順ソート
-                foreach ($nums as $num) {
+                sort($array);
+                foreach ($array as $num) {
                     echo $num . '<br>';
                 }
             } else {
                 echo '降順にソートします。<br>';
-                rsort($nums); // シンプルに降順ソート
-                foreach ($nums as $num) {
+                rsort($array);
+                foreach ($array as $num) {
                     echo $num . '<br>';
                 }
             }
         }
 
-        sort_2way(true);
-        sort_2way(false);
+        $nums = [15, 4, 18, 23, 10];
+
+        sort_2way($nums, true);
+        sort_2way($nums, false);
         ?>
     </p>
 </body>
